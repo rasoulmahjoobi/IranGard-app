@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.main-container {
+  font-family: "Poppins", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.head {
+  background-color: #605151;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin-left: 40px;
+}
+
+.text-brand {
+  font-size: 30px;
+  color: #ffaa00;
+}
+
+.head-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.head-btn {
+  color: #0c470b;
+  font-size: 13px;
+  font-weight: bold;
+  width: 80px;
+  height: 30px;
+  background-color: #77ffe4;
+  border: none;
+  border-radius: 10px;
+}
+
+.head-btn:hover {
+  box-shadow: 0px 4px 15px #082b07;
+  color: #000000;
+  font-size: 14px;
+}
+
+.login-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.login-btn {
+  color: #0c470b;
+  font-size: 17px;
+  font-weight: bold;
+  width: 80px;
+  height: 40px;
+  background-color: #77ffe4;
+  border: none;
+  border-radius: 15px;
+}
+
+.login-btn:hover {
+  box-shadow: 0px 4px 15px #082b07;
+  color: #000000;
+  font-size: 19px;
+}
+
+.logout-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.logout-btn {
+  color: #0c470b;
+  font-size: 17px;
+  font-weight: bold;
+  width: 80px;
+  height: 40px;
+  background-color: #ffaa00;
+  border: none;
+  border-radius: 15px;
+}
+
+.logout-btn:hover {
+  box-shadow: 0px 4px 15px #082b07;
+  color: #000000;
+  font-size: 19px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000008c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal-box {
+  background: #cefac8;
+  color: #0c470b;
+  border-radius: 16px;
+  padding: 32px;
+  width: 90%;
+  max-width: 420px;
+  max-height: auto;
+  position: relative;
+}
+
+.text-IranGard {
+  color: #ffaa00;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-input {
+  width: 300px;
+  height: 40px;
+  background-color: #f4ffeb;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color:#605151;
+  color:#f4ffeb;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.submit-btn:hover{
+  font-size: 15px;
+color: white;
+  box-shadow: 0px 4px 15px #605151;
+
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #000;
+  font-size: 25px;
+}
