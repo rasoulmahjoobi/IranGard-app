@@ -7,7 +7,7 @@ function Heading() {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-//   for making the login inputs empty
+  //   for making the login inputs empty
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -30,17 +30,16 @@ function Heading() {
 
     setIsLoggedIn(true);
 
-    setEmail("")
-    setPassword("")
-
+    setEmail("");
+    setPassword("");
   }
 
   //   activate logout btn
   function handleLogout() {
     localStorage.removeItem("user");
     setIsLoggedIn(false);
-    setEmail("")
-    setPassword("")
+    setEmail("");
+    setPassword("");
   }
 
   // creating UI
@@ -107,10 +106,24 @@ function Heading() {
           <button className="modal-close" onClick={closeAll}>
             ×
           </button>
-          <h1>About IranGard</h1>
+          <h1>
+            About <span className="text-brand">IranGard</span>
+          </h1>
           <p>
             IranGard is a nature tourism company dedicated to connecting
-            travelers with Iran's breathtaking landscapes.
+            travelers with Iran's breathtaking landscapes — from the towering
+            peaks of Damavand to the golden dunes of Maranjab Desert and the
+            misty forests of Abr.
+          </p>
+          <p>
+            Founded by a team of passionate hikers and local guides, we believe
+            adventure should be safe, sustainable, and unforgettable. Every tour
+            is led by experienced professionals who know the land and respect
+            it.
+          </p>
+          <p>
+            Our mission is simple: help you discover Iran's wild beauty, one
+            trail at a time.
           </p>
         </div>
       </div>
@@ -125,7 +138,24 @@ function Heading() {
             ×
           </button>
           <h1>Contact Us</h1>
-          <p>Have a question about our tours? We'd love to hear from you.</p>
+          <p>
+            Have a question about our tours, or need help planning your trip?
+            We'd love to hear from you.
+          </p>
+          <ul className="contact-list">
+            <li>
+              <strong>Email:</strong> info@irangard.com
+            </li>
+            <li>
+              <strong>Phone:</strong> +98 21 1234 5678
+            </li>
+            <li>
+              <strong>Address:</strong> Tehran, Iran
+            </li>
+            <li>
+              <strong>Hours:</strong> Sat–Thu, 9:00 AM – 6:00 PM
+            </li>
+          </ul>{" "}
         </div>
       </div>
 
@@ -149,7 +179,7 @@ function Heading() {
               name="email"
               placeholder="Email address"
               value={email}
-              onChange={(e)=>setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
             <input
@@ -158,7 +188,7 @@ function Heading() {
               name="password"
               placeholder="Password"
               value={password}
-              onChange={(e)=>setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
             <button type="submit" className="submit-btn">
