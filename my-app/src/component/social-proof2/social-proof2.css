@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.social-proof2-container {
+  font-family: "Poppins", sans-serif;
+  width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.reviews-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #6e4949;
+  margin-bottom: 24px;
+}
+
+.review-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.review-card {
+  background-color: #f5ede5;
+  border-radius: 16px;
+  padding: 32px;
+  width: 500px;
+  min-height: 220px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stars {
+  color: #ef9f27;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.review-text {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.review-author {
+  border-top: 1px solid #ddd;
+  padding-top: 12px;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #04342c;
+  margin: 0;
+}
+
+.author-location {
+  font-size: 13px;
+  color: #777;
+  margin: 4px 0 0;
+}
+
+.review-btn {
+  background-color: #7fe3c6;
+  color: #04342c;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.review-btn:hover {
+  background-color: #15b084;
+  font-size: 32px;
+}
+
+.review-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.active-dot {
+  background-color: #0f6e56;
+}

@@ -11,7 +11,7 @@
   justify-content: center;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
-  background-color: #ffba7a;
+  background-color: #f8c696;
 }
 
 .visuals-container {
@@ -47,7 +47,8 @@
 }
 
 .visuals-btn:hover {
-  background-color: #5fd4b3;
+  background-color: #15b084;
+  font-size: 24px;
 }
 
 .prev-btn {

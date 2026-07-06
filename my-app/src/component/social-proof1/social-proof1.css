@@ -1,8 +1,7 @@
 .social-proof1-container {
-  width: 1200px;
+  width: auto;
   height: 200px;
-  margin-bottom: 2%;
-  margin-left: 3%;
+  margin: 0px 30px 30px 30px;
   background-image: url(../../assets/images/Alangdareh-Forest-Gorgan-2.jpg);
   background-size: cover;
   background-position: center;
@@ -12,6 +11,7 @@
   align-items: center;
   justify-content: center;
   gap: 40px;
+  border-radius: 10px;
 }
 
 .logo-social-proof1 {
