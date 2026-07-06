@@ -2,27 +2,23 @@
 
 .visual-container {
   text-align: center;
-  margin-top:2% ;
-  margin-left: 53%;
   padding: 0px;
   width: 600px;
-  height: 480px;
-  border-radius: 10%;
+  height: 550px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-      font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #ffba7a;
 }
-
 
 .visuals-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* max-width: 300px; */
-  margin: 0 auto;
 }
 
 .visuals-image {
@@ -34,8 +30,8 @@
 }
 
 .visuals-btn {
-  background-color: #7FE3C6;
-  color: #04342C;
+  background-color: #7fe3c6;
+  color: #04342c;
   border: none;
   font-size: 16px;
   font-weight: 700;
@@ -62,17 +58,17 @@
   margin-left: 10px;
 }
 
-.visual-description{
-  font-family: 'Poppins', sans-serif;
+.visual-description {
+  font-family: "Poppins", sans-serif;
   text-align: justify;
   font-size: 17px;
-  color: #ffaa00;;
+  color: #5e3f00;
   margin-top: 2px;
   margin-left: 30px;
   padding: 0 20px;
   min-height: 40px;
   max-width: 500px;
-  text-shadow: 0px 2px 14px #080707;
+  text-shadow: 0px 5px 20px #5e3f00;
 }
 .emoji {
   font-size: 40px;
@@ -82,7 +78,8 @@
 }
 
 @keyframes swayLeftRight {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
