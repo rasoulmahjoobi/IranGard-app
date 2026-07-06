@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./heading.css";
+import Modal from "../modals/modals";
 
 function Heading() {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
@@ -98,105 +99,84 @@ function Heading() {
       </header>
 
       {/* About Modal */}
-      <div
-        className={isAboutOpen ? "modal-overlay" : "modal-overlay hidden"}
-        onClick={closeAll}
-      >
-        <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-          <button className="modal-close" onClick={closeAll}>
-            ×
-          </button>
-          <h1>
+      <Modal
+        isOpen={isAboutOpen}
+        onClose={closeAll}
+        title={
+          <>
             About <span className="text-brand">IranGard</span>
-          </h1>
-          <p>
-            IranGard is a nature tourism company dedicated to connecting
-            travelers with Iran's breathtaking landscapes — from the towering
-            peaks of Damavand to the golden dunes of Maranjab Desert and the
-            misty forests of Abr.
-          </p>
-          <p>
-            Founded by a team of passionate hikers and local guides, we believe
-            adventure should be safe, sustainable, and unforgettable. Every tour
-            is led by experienced professionals who know the land and respect
-            it.
-          </p>
-          <p>
-            Our mission is simple: help you discover Iran's wild beauty, one
-            trail at a time.
-          </p>
-        </div>
-      </div>
+          </>
+        }
+      >
+        <p>
+          IranGard is a nature tourism company dedicated to connecting
+          travelers with Iran's breathtaking landscapes — from the towering
+          peaks of Damavand to the golden dunes of Maranjab Desert and the
+          misty forests of Abr.
+        </p>
+        <p>
+          Founded by a team of passionate hikers and local guides, we believe
+          adventure should be safe, sustainable, and unforgettable. Every tour
+          is led by experienced professionals who know the land and respect
+          it.
+        </p>
+        <p>
+          Our mission is simple: help you discover Iran's wild beauty, one
+          trail at a time.
+        </p>
+      </Modal>
 
       {/* Contact Modal */}
-      <div
-        className={isContactOpen ? "modal-overlay" : "modal-overlay hidden"}
-        onClick={closeAll}
-      >
-        <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-          <button className="modal-close" onClick={closeAll}>
-            ×
-          </button>
-          <h1>Contact Us</h1>
-          <p>
-            Have a question about our tours, or need help planning your trip?
-            We'd love to hear from you.
-          </p>
-          <ul className="contact-list">
-            <li>
-              <strong>Email:</strong> info@irangard.com
-            </li>
-            <li>
-              <strong>Phone:</strong> +98 21 1234 5678
-            </li>
-            <li>
-              <strong>Address:</strong> Tehran, Iran
-            </li>
-            <li>
-              <strong>Hours:</strong> Sat–Thu, 9:00 AM – 6:00 PM
-            </li>
-          </ul>{" "}
-        </div>
-      </div>
+      <Modal isOpen={isContactOpen} onClose={closeAll} title="Contact Us">
+        <p>
+          Have a question about our tours, or need help planning your trip?
+          We'd love to hear from you.
+        </p>
+        <ul className="contact-list">
+          <li>
+            <strong>Email:</strong> info@irangard.com
+          </li>
+          <li>
+            <strong>Phone:</strong> +98 21 1234 5678
+          </li>
+          <li>
+            <strong>Address:</strong> Tehran, Iran
+          </li>
+          <li>
+            <strong>Hours:</strong> Sat–Thu, 9:00 AM – 6:00 PM
+          </li>
+        </ul>
+      </Modal>
 
       {/* Login Modal */}
-      <div
-        className={isLoginOpen ? "modal-overlay" : "modal-overlay hidden"}
-        onClick={closeAll}
-      >
-        <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-          <button className="modal-close" onClick={closeAll}>
-            ×
+      <Modal isOpen={isLoginOpen} onClose={closeAll} title="Login">
+        <p className="modal-subtitle">
+          Welcome! Log in to book tours and track your trips.
+        </p>
+        <form className="login-form" onSubmit={handleLoginSubmit}>
+          <input
+            className="login-input"
+            type="email"
+            name="email"
+            placeholder="Email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            className="login-input"
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="submit-btn">
+            Log In
           </button>
-          <h1>Login</h1>
-          <p className="modal-subtitle">
-            Welcome! Log in to book tours and track your trips.
-          </p>
-          <form className="login-form" onSubmit={handleLoginSubmit}>
-            <input
-              className="login-input"
-              type="email"
-              name="email"
-              placeholder="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <input
-              className="login-input"
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <button type="submit" className="submit-btn">
-              Log In
-            </button>
-          </form>
-        </div>
-      </div>
+        </form>
+      </Modal>
     </div>
   );
 }
