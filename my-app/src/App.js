@@ -6,6 +6,7 @@ import OfferCta from "./component/offer-cta/offer-cta";
 import SocialProof1 from "./component/social-proof1/social-proof1";
 import SocialProof2 from "./component/social-proof2/social-proof2";
 import RepeatCTA from "./component/repeat-cta/repeat-cta";
+import Footer from "./component/footer/footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <SocialProof1 />
       <SocialProof2 />
       <RepeatCTA />
+      <Footer />
     </div>
   );
 }
