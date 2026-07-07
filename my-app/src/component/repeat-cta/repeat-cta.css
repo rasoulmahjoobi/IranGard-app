@@ -1,14 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-.offer-cta-container {
+.outer-container {
   font-family: "Poppins", sans-serif;
-  background-color: #77ffe4;
-  width: 550px;
-  height: 550px;
-  border-radius: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.offer-title {
+.cta-repeat-container {
+  background-color: #f8ffc5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  min-width: 500px;
+  height: auto;
+  max-height: 400px;
+  margin: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 25px #ff8400;
+}
+
+.cta-title {
   text-align: center;
   padding: 5%;
   color: #ffaa00;
@@ -41,19 +53,32 @@
   }
 }
 
-.offer-text {
-  margin: 20px;
+.cta-text {
+  margin: 0px 20px 20px 20px;
   color: #6e4949;
   font-weight: 600;
   font-size: 18px;
 }
 
-.text-blue {
-  color: rgb(40, 77, 182);
+.cta-btn {
+  margin: 20px;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #208b20;
+  color: #fcfbd3;
   font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-.input-container {
+.cta-btn:hover {
+  color: #ffffff;
+  background-color: #176417;
+}
+
+.cta-modal-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +86,7 @@
   padding: 20px;
 }
 
-.offer-input {
+.cta-modal-input {
   width: 300px;
   height: 40px;
   background-color: #f3f7e4;
@@ -69,7 +94,7 @@
   border-radius: 10px;
 }
 
-.offer-btn {
+.cta-modal-btn {
   width: 120px;
   height: 35px;
   border: none;
@@ -79,7 +104,7 @@
   font-weight: bold;
 }
 
-.offer-btn:hover {
+.cta-modal-btn:hover {
   cursor: pointer;
   color: #ffffff;
   background-color: #4c3232;
